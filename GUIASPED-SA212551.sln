@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUIASPED-SA212551", "GUIASPED-SA212551\GUIASPED-SA212551.csproj", "{3A6AACC7-D18A-4D35-8EF0-F4FA99D53DEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guia9 - Monticulos", "Guia9 - Monticulos\Guia9 - Monticulos.csproj", "{771BA1C8-2FFF-4B6D-9E36-BF3DC9F7886A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A6AACC7-D18A-4D35-8EF0-F4FA99D53DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6AACC7-D18A-4D35-8EF0-F4FA99D53DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6AACC7-D18A-4D35-8EF0-F4FA99D53DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6AACC7-D18A-4D35-8EF0-F4FA99D53DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{771BA1C8-2FFF-4B6D-9E36-BF3DC9F7886A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771BA1C8-2FFF-4B6D-9E36-BF3DC9F7886A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771BA1C8-2FFF-4B6D-9E36-BF3DC9F7886A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{771BA1C8-2FFF-4B6D-9E36-BF3DC9F7886A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58C33888-BDA7-4994-8077-D27F2F677EBA}
+	EndGlobalSection
+EndGlobal
