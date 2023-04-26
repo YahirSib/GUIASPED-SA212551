@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUIASPED-SA212551", "GUIASP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guia9 - Monticulos", "Guia9 - Monticulos\Guia9 - Monticulos.csproj", "{771BA1C8-2FFF-4B6D-9E36-BF3DC9F7886A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guia10 - Grafos", "Guia10 - Grafos\Guia10 - Grafos.csproj", "{0EE39FF0-A371-475F-AA80-D9C704A1244D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{771BA1C8-2FFF-4B6D-9E36-BF3DC9F7886A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{771BA1C8-2FFF-4B6D-9E36-BF3DC9F7886A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{771BA1C8-2FFF-4B6D-9E36-BF3DC9F7886A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE39FF0-A371-475F-AA80-D9C704A1244D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE39FF0-A371-475F-AA80-D9C704A1244D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE39FF0-A371-475F-AA80-D9C704A1244D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE39FF0-A371-475F-AA80-D9C704A1244D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

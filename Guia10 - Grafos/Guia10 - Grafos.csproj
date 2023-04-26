@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3A6AACC7-D18A-4D35-8EF0-F4FA99D53DEE}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>GUIASPED_SA212551</RootNamespace>
-    <AssemblyName>GUIASPED-SA212551</AssemblyName>
+    <ProjectGuid>{0EE39FF0-A371-475F-AA80-D9C704A1244D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Guia10___Grafos</RootNamespace>
+    <AssemblyName>Guia10 - Grafos</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -78,16 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Guia10 - Grafos\Guia10 - Grafos.csproj">
-      <Project>{0ee39ff0-a371-475f-aa80-d9c704a1244d}</Project>
-      <Name>Guia10 - Grafos</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Guia9 - Monticulos\Guia9 - Monticulos.csproj">
-      <Project>{771ba1c8-2fff-4b6d-9e36-bf3dc9f7886a}</Project>
-      <Name>Guia9 - Monticulos</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -105,7 +105,7 @@ namespace Guia9___Monticulos
                 a[indice] = a[mayor];
                 a[mayor] = temp;
                 intercambio(ref Arreglo, mayor, indice);
-                Max_Num(a, x, indice, ref botones);
+                Max_Num(a, x, mayor, ref botones);
             }
         }
 
@@ -122,13 +122,14 @@ namespace Guia9___Monticulos
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             int num = int.Parse(txtNumero.Text);
-            Array.Resize<int>(ref Arreglo_numeros, i+1);
+            Array.Resize<int>(ref Arreglo_numeros, i + 1);
             Arreglo_numeros[i] = num;
-            Array.Resize<Button>(ref Arreglo, i+1) ;
+            Array.Resize<Button>(ref Arreglo, i + 1);
 
             Arreglo[i] = new Button();
             Arreglo[i].Text = Arreglo_numeros[i].ToString();
             Arreglo[i].Width = 50;
+            Arreglo[i].Height = 50;
             Arreglo[i].BackColor = Color.GreenYellow;
             Arreglo[i].Location = new Point(xo, yo) + new Size(-20, 0);
 
@@ -142,15 +143,14 @@ namespace Guia9___Monticulos
             else
             {
                 xo += (2 * tam);
-                tabPage2.Controls.Add(Arreglo[i]);
-                i++;
-                estado = true;
-                ec = false;
-                tabPage2.Refresh();
-                txtNumero.Clear();
-                txtNumero.Focus();
             }
-
+            tabPage2.Controls.Add(Arreglo[i]);
+            i++;
+            estado = true;
+            ec = false;
+            tabPage2.Refresh();
+            txtNumero.Clear();
+            txtNumero.Focus();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -170,6 +170,39 @@ namespace Guia9___Monticulos
             {
                 btnAgregar.Enabled = false;
                 btnLimpiar.Enabled = false;
+                btnOrdenar.Enabled = false;
+                this.Cursor = Cursors.WaitCursor;
+                if (!ec)
+                {
+                    Heap_Num();
+                }
+                else
+                {
+                    HPN();
+                }
+
+                btnAgregar.Enabled = true;
+                btnLimpiar.Enabled = true;
+                btnOrdenar.Enabled = true;
+                this.Cursor= Cursors.Default;
+
+            }
+        }
+
+        private void Monticulos_Paint(object sender, PaintEventArgs e)
+        {
+            if (estado)
+            {
+                try
+                {
+                    Dibujar_Arreglo(ref Arreglo, ref tabPage2);
+                    Dibujar_Ramas(ref Arreglo, ref tabPage2, e);
+                }catch (Exception ex)
+                {
+                    
+                }
+
+                estado = false;
             }
         }
 
@@ -182,14 +215,14 @@ namespace Guia9___Monticulos
                 intercambio(ref Arreglo, i, 1);
                 temp = Arreglo_numeros[i];
                 Arreglo_numeros[i] = Arreglo_numeros[1];
-                Arreglo_numeros[i] = temp;
+                Arreglo_numeros[1] = temp;
                 x--;
             }
         }
 
         public void Dibujar_Arreglo(ref Button[] botones, ref TabPage tb)
         {
-            for (int j = 1; j < botones.Length; i++)
+            for (int j = 1; j < botones.Length; j++)
             {
                 tb.Controls.Add(this.Arreglo[j]);
             }
@@ -197,11 +230,11 @@ namespace Guia9___Monticulos
 
         public void Dibujar_Ramas(ref Button[] botones, ref TabPage tb, PaintEventArgs e)
         {
-            Pen Lapiz = new Pen(Color.Gray, 1.5f);
+            Pen Lapiz = new Pen(Color.Red, 1.5f);
             Graphics g = e.Graphics;
             for (int j = 1; j < Arreglo.Length; j++)
             {
-                if (Arreglo[2 * j] != null)
+                if (Arreglo[j * 2] != null)
                 {
                     g.DrawLine(Lapiz, Arreglo[j].Location.X, Arreglo[j].Location.Y + 20, Arreglo[2 * j].Location.X + 20, Arreglo[2 * j].Location.Y);
                 }

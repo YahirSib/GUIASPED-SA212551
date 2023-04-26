@@ -22,5 +22,11 @@ namespace GUIASPED_SA212551
             Guia9___Monticulos.Monticulos frmGuia9 = new Guia9___Monticulos.Monticulos();
             frmGuia9.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Guia10___Grafos.Grafos frmGuia10 = new Guia10___Grafos.Grafos();
+            frmGuia10.Show();
+        }
     }
 }
