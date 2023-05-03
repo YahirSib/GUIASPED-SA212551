@@ -1,6 +1,6 @@
 ﻿namespace Guia10___Grafos
 {
-    partial class Grafos
+    partial class Pizzara
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,20 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Grafos
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 56);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(765, 301);
+            this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(341, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Simulador de Grafos";
+            // 
+            // Pizzara
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 305);
-            this.Name = "Grafos";
-            this.Text = "Grafos";
+            this.ClientSize = new System.Drawing.Size(789, 369);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Name = "Pizzara";
+            this.Text = " Grafos";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

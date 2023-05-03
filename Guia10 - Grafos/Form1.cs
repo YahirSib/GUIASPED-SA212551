@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Guia10___Grafos
 {
-    public partial class Grafos : Form
+    public partial class Pizzara : Form
     {
-        public Grafos()
+        public Pizzara()
         {
             InitializeComponent();
         }

@@ -16,7 +16,7 @@ namespace Guia10___Grafos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Grafos());
+            Application.Run(new Pizzara());
         }
     }
 }

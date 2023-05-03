@@ -25,7 +25,7 @@ namespace GUIASPED_SA212551
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Guia10___Grafos.Grafos frmGuia10 = new Guia10___Grafos.Grafos();
+            Guia10___Grafos.Pizzara frmGuia10 = new Guia10___Grafos.Pizzara();
             frmGuia10.Show();
         }
     }
