@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CArco.cs" />
+    <Compile Include="CLista.cs" />
     <Compile Include="CVertice.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
