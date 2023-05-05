@@ -16,6 +16,12 @@ namespace Guia10___Grafos
         Dictionary<string, short> _banderas;
         Dictionary<string, short> _banderas_predeterminado;
 
+        //GUIA 11
+        public int distancianodo;
+        public Boolean Visitado;
+        public CVertice Padre;
+        public Boolean pesoasignado;
+
         static int size = 35;
         Size dimensiones;
         Color color_nodo;
@@ -34,9 +40,10 @@ namespace Guia10___Grafos
             this.ListaAdyacencia = new List<CArco>();
             this._banderas = new Dictionary<string, short>();
             this._banderas_predeterminado = new Dictionary<string, short>();
-            this.Color = Color.Green;
+            this.Color = Color.FromArgb(51,204,255);
             this.Dimensiones = new Size(size,size);
-            this.FontColor = Color.White;
+            this.FontColor = Color.Black;
+            this.Visitado = false;
         }
 
         public CVertice() : this("") { }
@@ -95,6 +102,22 @@ namespace Guia10___Grafos
         public string ToString()
         {
             return this.Valor;
+        }
+
+        public void colorear(Graphics g)
+        {
+            SolidBrush b = new SolidBrush(Color.GreenYellow);
+            Rectangle areaNodo = new Rectangle(this._posicion.X - radio, this._posicion.Y - radio, 
+                this.dimensiones.Width, this.dimensiones.Height);
+            g.FillEllipse(b, areaNodo);
+            g.DrawString(this.Valor, new Font("Times New Roma", 14), new SolidBrush(color_fuente),
+                this._posicion.X, this._posicion.Y, new StringFormat()
+                {
+                    Alignment = StringAlignment.Center,
+                    LineAlignment = StringAlignment.Center,
+                });
+            g.DrawEllipse(new Pen(Brushes.Black, (float)1.0), areaNodo);
+            b.Dispose();
         }
 
     }

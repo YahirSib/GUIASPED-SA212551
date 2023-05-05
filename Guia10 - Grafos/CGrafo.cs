@@ -16,7 +16,7 @@ namespace Guia10___Grafos
             nodos = new List<CVertice>();
         }
 
-        public CVertice AgregarVerice(string valor)
+        public CVertice AgregarVertice(string valor)
         {
             CVertice nodo = new CVertice(valor);
             nodos.Add(nodo);
@@ -97,5 +97,11 @@ namespace Guia10___Grafos
             }
             DibujarGrafo(g);
         }
+
+        public void ColorArista()
+        {
+
+        }
+
     }
 }

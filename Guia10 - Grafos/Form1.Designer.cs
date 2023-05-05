@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.Simulador = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.CMSCrearVertice = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1.SuspendLayout();
+            this.CMSCrearVertice = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.nuevoVertice = new System.Windows.Forms.ToolStripMenuItem();
+            this.CMSCrearVertice.SuspendLayout();
             this.SuspendLayout();
             // 
             // Simulador
@@ -43,7 +43,10 @@
             this.Simulador.Size = new System.Drawing.Size(765, 301);
             this.Simulador.TabIndex = 0;
             this.Simulador.Paint += new System.Windows.Forms.PaintEventHandler(this.Simulador_Paint);
+            this.Simulador.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Simulador_MouseDown);
             this.Simulador.MouseLeave += new System.EventHandler(this.Simulador_MouseLeave);
+            this.Simulador.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Simulador_MouseMove);
+            this.Simulador.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Simulador_MouseUp);
             // 
             // label1
             // 
@@ -54,18 +57,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Simulador de Grafos";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CMSCrearVertice});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(148, 26);
-            // 
             // CMSCrearVertice
             // 
-            this.CMSCrearVertice.Name = "CMSCrearVertice";
-            this.CMSCrearVertice.Size = new System.Drawing.Size(147, 22);
-            this.CMSCrearVertice.Text = "Nuevo Vertice";
+            this.CMSCrearVertice.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoVertice});
+            this.CMSCrearVertice.Name = "contextMenuStrip1";
+            this.CMSCrearVertice.Size = new System.Drawing.Size(181, 48);
+           //
+            // nuevoVertice
+            // 
+            this.nuevoVertice.Name = "nuevoVertice";
+            this.nuevoVertice.Size = new System.Drawing.Size(180, 22);
+            this.nuevoVertice.Text = "Nuevo Vertice";
+            this.nuevoVertice.Click += new System.EventHandler(this.nuevoVertice_Click);
             // 
             // Pizzara
             // 
@@ -76,7 +80,7 @@
             this.Controls.Add(this.Simulador);
             this.Name = "Pizzara";
             this.Text = " Grafos";
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.CMSCrearVertice.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,8 +90,8 @@
 
         private System.Windows.Forms.Panel Simulador;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem CMSCrearVertice;
+        private System.Windows.Forms.ContextMenuStrip CMSCrearVertice;
+        private System.Windows.Forms.ToolStripMenuItem nuevoVertice;
     }
 }
 

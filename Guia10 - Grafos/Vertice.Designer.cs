@@ -68,6 +68,7 @@
             this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -90,6 +91,10 @@
             this.Controls.Add(this.label1);
             this.Name = "Vertice";
             this.Text = "Vertice";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Vertice_FormClosing);
+            this.Load += new System.EventHandler(this.Vertice_Load);
+            this.Shown += new System.EventHandler(this.Vertice_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Vertice_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,8 +104,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtVertice;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.TextBox txtVertice;
     }
 }
