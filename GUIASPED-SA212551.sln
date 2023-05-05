@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guia9 - Monticulos", "Guia9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guia10 - Grafos", "Guia10 - Grafos\Guia10 - Grafos.csproj", "{0EE39FF0-A371-475F-AA80-D9C704A1244D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guia 8 - Tabla Hash 1", "Guia 8 - Tabla Hash\Guia 8 - Tabla Hash 1.csproj", "{C4DA5728-3FE2-46DF-B489-C2AE47E136A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0EE39FF0-A371-475F-AA80-D9C704A1244D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EE39FF0-A371-475F-AA80-D9C704A1244D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EE39FF0-A371-475F-AA80-D9C704A1244D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4DA5728-3FE2-46DF-B489-C2AE47E136A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4DA5728-3FE2-46DF-B489-C2AE47E136A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4DA5728-3FE2-46DF-B489-C2AE47E136A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4DA5728-3FE2-46DF-B489-C2AE47E136A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

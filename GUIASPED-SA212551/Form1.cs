@@ -28,5 +28,11 @@ namespace GUIASPED_SA212551
             Guia10___Grafos.Pizzara frmGuia10 = new Guia10___Grafos.Pizzara();
             frmGuia10.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Guia_8___Tabla_Hash.TablaHash frmGuia81 = new Guia_8___Tabla_Hash.TablaHash();
+            frmGuia81.Show();
+        }
     }
 }
