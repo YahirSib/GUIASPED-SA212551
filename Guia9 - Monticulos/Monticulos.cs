@@ -109,6 +109,33 @@ namespace Guia9___Monticulos
             }
         }
 
+        public void Min_Num(int[] a, int x, int indice, ref Button[] botones)
+        {
+            int izquierdo = indice * 2;
+            int derecho = indice * 2 + 1;
+            int menor = 0;
+            if (izquierdo < x && a[izquierdo] < a[indice])
+            {
+                menor = izquierdo;
+            }
+            else
+            {
+                menor = indice;
+            }
+            if (derecho < x && a[derecho] < a[menor])
+            {
+                menor = derecho;
+            }
+            if (menor != indice)
+            {
+                int temp = a[indice];
+                a[indice] = a[menor];
+                a[menor] = temp;
+                intercambio(ref Arreglo, menor, indice);
+                Min_Num(a, x, menor, ref botones);
+            }
+        }
+
         public void Heap_Num()
         {
             ec = true;
@@ -116,6 +143,16 @@ namespace Guia9___Monticulos
             for (int i = x/2; i > 0; i--)
             {
                 Max_Num(Arreglo_numeros, x, i, ref Arreglo);
+            }
+        }
+
+        public void Heap_Num2()
+        {
+            ec = true;
+            int x = Arreglo.Length;
+            for (int i = x / 2; i > 0; i--)
+            {
+                Min_Num(Arreglo_numeros, x, i, ref Arreglo);
             }
         }
 
@@ -174,7 +211,15 @@ namespace Guia9___Monticulos
                 this.Cursor = Cursors.WaitCursor;
                 if (!ec)
                 {
-                    Heap_Num();
+                    if (radioButton1.Checked)
+                    {
+                        Heap_Num();
+                    }
+                    else
+                    {
+                        Heap_Num2();
+                    }
+                    
                 }
                 else
                 {
