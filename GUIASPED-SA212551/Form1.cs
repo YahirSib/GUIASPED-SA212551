@@ -34,5 +34,11 @@ namespace GUIASPED_SA212551
             Guia_8___Tabla_Hash.TablaHash frmGuia81 = new Guia_8___Tabla_Hash.TablaHash();
             frmGuia81.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Guia_8___Tabla_Hash_2.Form1 fromGuia82 = new Guia_8___Tabla_Hash_2.Form1();
+            fromGuia82.Show();
+        }
     }
 }

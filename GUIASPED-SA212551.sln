@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guia10 - Grafos", "Guia10 -
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guia 8 - Tabla Hash 1", "Guia 8 - Tabla Hash\Guia 8 - Tabla Hash 1.csproj", "{C4DA5728-3FE2-46DF-B489-C2AE47E136A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guia 8 - Tabla Hash 2", "Guia 8 - Tabla Hash 2\Guia 8 - Tabla Hash 2.csproj", "{06E62F88-37C2-414C-B714-4D33346930C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C4DA5728-3FE2-46DF-B489-C2AE47E136A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4DA5728-3FE2-46DF-B489-C2AE47E136A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4DA5728-3FE2-46DF-B489-C2AE47E136A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E62F88-37C2-414C-B714-4D33346930C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E62F88-37C2-414C-B714-4D33346930C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E62F88-37C2-414C-B714-4D33346930C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E62F88-37C2-414C-B714-4D33346930C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
