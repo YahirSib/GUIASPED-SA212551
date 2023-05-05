@@ -98,7 +98,7 @@ namespace Guia10___Grafos
             DibujarGrafo(g);
         }
 
-        public void ColorArista()
+        public void ColorArista(string )
         {
 
         }
