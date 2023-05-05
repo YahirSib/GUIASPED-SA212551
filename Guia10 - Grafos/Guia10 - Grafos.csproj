@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arco.Designer.cs">
+      <DependentUpon>Arco.cs</DependentUpon>
+    </Compile>
     <Compile Include="CArco.cs" />
     <Compile Include="CGrafo.cs" />
     <Compile Include="CLista.cs" />
@@ -67,6 +73,9 @@
     <Compile Include="Vertice.Designer.cs">
       <DependentUpon>Vertice.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Arco.resx">
+      <DependentUpon>Arco.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
