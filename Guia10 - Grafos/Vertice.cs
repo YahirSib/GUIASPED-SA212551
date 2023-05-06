@@ -31,7 +31,8 @@ namespace Guia10___Grafos
             }
             else
             {
-                control = false;
+                dato = valor;
+                control = true;
                 Hide();
             }
         }

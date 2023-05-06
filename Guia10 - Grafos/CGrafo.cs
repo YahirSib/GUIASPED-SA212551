@@ -10,6 +10,7 @@ namespace Guia10___Grafos
     class CGrafo
     {
         public List<CVertice> nodos;
+        public string Tipo;
 
         public CGrafo()
         {

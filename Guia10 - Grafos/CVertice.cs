@@ -34,9 +34,9 @@ namespace Guia10___Grafos
         public Point Posicion { get {return _posicion;} set { _posicion = value; } }
         public Size Dimensiones { get { return dimensiones; } set {  dimensiones = value; radio = value.Width / 2; } }
 
-        public CVertice(string Valor)
+        public CVertice(string valor)
         {
-            this.Valor = Valor;
+            this.Valor = valor;
             this.ListaAdyacencia = new List<CArco>();
             this._banderas = new Dictionary<string, short>();
             this._banderas_predeterminado = new Dictionary<string, short>();
@@ -53,7 +53,14 @@ namespace Guia10___Grafos
             SolidBrush b = new SolidBrush(this.color_nodo);
             Rectangle areaNodo = new Rectangle(this._posicion.X - radio, this._posicion.Y - radio, this.dimensiones.Width, this.dimensiones.Height);
             g.FillEllipse(b, areaNodo);
-            g.DrawString(this.Valor, new Font("Times New Roma", 14), new SolidBrush(color_fuente), this._posicion.X, this._posicion.Y, new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+            g.DrawString(this.Valor, new Font("Times New Roman", 14), new SolidBrush(color_fuente),
+                this._posicion.X, this._posicion.Y, 
+                new StringFormat() 
+                { 
+                    Alignment = StringAlignment.Center, 
+                    LineAlignment = StringAlignment.Center 
+                }
+            );
             g.DrawEllipse(new Pen(Brushes.Black, (float)1.0), areaNodo);
             b.Dispose();
         }

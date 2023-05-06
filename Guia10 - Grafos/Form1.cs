@@ -21,6 +21,7 @@ namespace Guia10___Grafos
         private CVertice NodoOrigen;
         private CVertice NodoDestino;
         private int var_control = 0;
+        public string ruta;
 
         private Vertice ventanaVertice;
         private Arco ventanaArco;
@@ -79,6 +80,8 @@ namespace Guia10___Grafos
         {
             vertice.Visitado = true;
             vertice.colorear(g);
+            ruta += vertice.Valor + " ";
+            txtRuta.Text = ruta;
             Thread.Sleep(500);
             vertice.DibujarVertice(g);
             foreach (CArco adya in vertice.ListaAdyacencia)
@@ -86,6 +89,10 @@ namespace Guia10___Grafos
                 if (!adya.nDestino.Visitado)
                 {
                     recorridoProfundidad(adya.nDestino, g);
+                }
+                else
+                {
+                    ruta = "";
                 }
             }
         }
@@ -97,9 +104,11 @@ namespace Guia10___Grafos
             vertice.colorear(g);
             Thread.Sleep(500);
             vertice.DibujarVertice(g);
+            ruta += vertice.Valor + " ";
             if (vertice.Valor == destino)
             {
                 nodoEncontrado = true;
+                ruta = "";
                 return;
             }
             while (cola.Count > 0)
@@ -115,6 +124,8 @@ namespace Guia10___Grafos
                             adya.nDestino.colorear(g);
                             Thread.Sleep(1000);
                             adya.nDestino.DibujarVertice(g);
+                            ruta += adya.nDestino.Valor;
+                            txtRuta.Text = ruta;
                             if (destino != "")
                             {
                                 distancia += adya.peso;
@@ -123,6 +134,7 @@ namespace Guia10___Grafos
                             if (adya.nDestino.Valor == destino)
                             {
                                 nodoEncontrado = true;
+                                ruta = "";
                                 return;
                             }
                         }
@@ -362,6 +374,38 @@ namespace Guia10___Grafos
             }
         }
 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                radioButton1.Enabled = false;
+                radioButton2.Enabled = false;
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                radioButton1.Enabled = false;
+                radioButton2.Enabled = false;
+            }
+        }
+        int i = 0;
+        private void Tabla()
+        {  
+            foreach (CVertice aux in grafo.nodos)
+            {
+                            
+            }
+        }
+
+        private void Pizzara_Load(object sender, EventArgs e)
+        {
+            
+           
+        }
+
         private void Simulador_MouseLeave(object sender, EventArgs e)
         {
             Simulador.Refresh();
@@ -455,12 +499,13 @@ namespace Guia10___Grafos
                     ventanaVertice.control = false;
                     ventanaVertice.ShowDialog();
                     numeronodos = grafo.nodos.Count;
-                    grafo.AgregarVertice(nuevoNodo);
                     if (ventanaVertice.control)
                     {
-                        if (grafo.BuscarVertice(ventanaVertice.dato) != null)
+                        if (grafo.BuscarVertice(ventanaVertice.dato) == null)
                         {
                             nuevoNodo.Valor = ventanaVertice.dato;
+                            grafo.AgregarVertice(nuevoNodo);
+                            Tabla();
                         }
                         else
                         {
@@ -480,7 +525,7 @@ namespace Guia10___Grafos
                 {
                     if ((NodoOrigen = grafo.DetectarPunto(e.Location)) != null)
                     {
-                        CMSCrearVertice.Text = "Nodo" + NodoOrigen.Valor;
+                        nuevoVertice.Text = "Nodo" + NodoOrigen.Valor;
                     }
                     else
                     {
